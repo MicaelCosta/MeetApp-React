@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { format, parseISO } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 import { MdEdit, MdDeleteForever, MdEvent, MdPlace } from 'react-icons/md';
 
 import { Container } from './styles';
@@ -59,7 +61,11 @@ export default function Detalhes({ match }) {
             <footer>
                 <span>
                     <MdEvent size={20} />
-                    24 de Junho, às 20h
+                    {format(
+                        parseISO(meetup.date_meetup),
+                        "dd 'de' MMMM 'às' HH'h'",
+                        { locale: pt }
+                    )}
                 </span>
                 <span>
                     <MdPlace size={20} />

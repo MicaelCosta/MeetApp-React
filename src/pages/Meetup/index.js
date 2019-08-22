@@ -52,7 +52,7 @@ export default function Meetup({ match }) {
                     multiline={2}
                 />
 
-                <DatePicker name="date_meetup" placeholder="Data do meetup" />
+                {<DatePicker name="date_meetup" placeholder="Data do meetup" />}
 
                 <Input name="location" placeholder="Localização" />
 
