@@ -1,36 +1,36 @@
-export function createMeetupRequest(data){
+export function createMeetupRequest(data) {
     return {
         type: '@meetup/CREATE_MEETUP_REQUEST',
         payload: { data },
-    }
+    };
 }
 
-export function createMeetupSuccess(meetup){
+export function createMeetupSuccess(meetup) {
     return {
         type: '@meetup/CREATE_MEETUP_SUCCESS',
         payload: { meetup },
-    }
+    };
 }
 
-export function updateMeetupRequest(data){
+export function updateMeetupRequest(data) {
     return {
         type: '@meetup/UPDATE_MEETUP_REQUEST',
-        payload: { data }
-    }
+        payload: { data },
+    };
 }
 
-export function updateMeetupSuccess(meetup){
+export function updateMeetupSuccess(meetup) {
     return {
         type: '@meetup/UPDATE_MEETUP_SUCCESS',
-        payload: { meetup }
-    }
+        payload: { meetup },
+    };
 }
 
-export function deleteMeetupRequest(id){
+export function deleteMeetupRequest(id) {
     return {
         type: '@meetup/DELETE_MEETUP_REQUEST',
-        payload: { id }
-    }
+        payload: { id },
+    };
 }
 
 export function loadMeetupRequest(userId) {

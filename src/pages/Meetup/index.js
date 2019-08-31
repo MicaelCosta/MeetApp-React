@@ -32,7 +32,8 @@ export default function Meetup({ match }) {
 
     function handleSubmit(data) {
         if (meetup) {
-            dispatch(updateMeetupRequest(data));
+            console.tron.log('meetup', meetup);
+            dispatch(updateMeetupRequest({ ...data, meetup_id }));
         } else {
             dispatch(createMeetupRequest(data));
         }

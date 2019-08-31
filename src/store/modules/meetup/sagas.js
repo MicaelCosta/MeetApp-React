@@ -41,7 +41,7 @@ export function* createMeetup({ payload }) {
 export function* updateMeetup({ payload }) {
     try {
         const {
-            id,
+            meetup_id,
             title,
             file_id,
             description,
@@ -49,8 +49,8 @@ export function* updateMeetup({ payload }) {
             date_meetup,
         } = payload.data;
 
-        const response = yield call(api.put, `meetups/${id}`, {
-            id,
+        const response = yield call(api.put, `meetups/${meetup_id}`, {
+            id: meetup_id,
             title,
             file_id,
             description,
